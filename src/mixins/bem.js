@@ -12,12 +12,14 @@ const bemMixin = {
     name: "bem",
     methods: {
         bem({element = "", mod = {}} = {}) {
-            if (!('__name' in this.$options)) {
-                console.log(this.$options);
+            let block;
+
+            if ('__name' in this.$options) {
+                block = this.$options.__name;
+            } else {
+                block = this.$options.__file.split("/").pop().replace(".vue", "");
             }
 
-            // const block = this.$options.__file.split("/").pop().replace(".vue", "");
-            const block = this.$options.__name;
             const classList = [];
 
             if (element) {
