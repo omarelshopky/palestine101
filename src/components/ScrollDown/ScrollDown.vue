@@ -1,5 +1,6 @@
 <script setup>
-import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
+// eslint-disable-next-line no-unused-vars
+const unusedVariableCreatedToEnableTheBemMixin = false;
 </script>
 
 <template>

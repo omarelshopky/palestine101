@@ -1,5 +1,6 @@
 <script setup>
 import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
+import ColorfulCircle from 'components/ColorfulCircle/ColorfulCircle.vue';
 import ScrollDown from 'components/ScrollDown/ScrollDown.vue';
 </script>
 
@@ -9,13 +10,13 @@ import ScrollDown from 'components/ScrollDown/ScrollDown.vue';
             <div :class="bem({ element: 'LeftColumn' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'vertical', location: 'leftRight' } })"></span>
                 <span :class="bem({ element: 'Border', mod: { type: 'vertical', location: 'leftLeft' } })"></span>
-                <span :class="bem({ element: 'Circle', mod: { color: 'green', location: 'topLeft' } })"></span>
+                <ColorfulCircle color="green" location="topLeft" />
             </div>
             <div :class="bem({ element: 'RightColumn' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'vertical', location: 'rightRight' } })"></span>
                 <span :class="bem({ element: 'Border', mod: { type: 'vertical', location: 'rightLeft' } })"></span>
                 <span :class="bem({ element: 'RightColumnFarLeftBorder' })"></span>
-                <span :class="bem({ element: 'Circle', mod: { color: 'green', location: 'bottomRight' } })"></span>
+                <ColorfulCircle color="green" location="bottomRight" />
             </div>
             <div :class="bem({ element: 'UpperRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'lower' } })"></span>
@@ -33,8 +34,8 @@ import ScrollDown from 'components/ScrollDown/ScrollDown.vue';
                 </div>
             </div>
             <div :class="bem({ element: 'CenterWrapper' })">
-                <span :class="bem({ element: 'Circle', mod: { color: 'red', location: 'bottomLeft' } })"></span>
-                <span :class="bem({ element: 'Circle', mod: { color: 'red', location: 'topRight' } })"></span>
+                <ColorfulCircle color="red" location="bottomLeft" />
+                <ColorfulCircle color="red" location="topRight" />
                 <h1 :class="bem({ element: 'Title' })">
                     Palestine <br>
                     <span>101</span>
