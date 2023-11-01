@@ -3,10 +3,12 @@
     --circle-size-medium: 5.375rem;
     --circle-size-small: 3.3125rem;
     --circle-size-tiny: 2.625rem;
-    --circle-animation-duration: 1.3s;
-    --circle-animation-delay: 1.3s;
+    --circle-animation-duration: 1.8s;
+    --circle-animation-delay: 0.5s;
     --border-animation-duration: 2s;
     --border-animation-delay: 0.3s;
+    --content-animation-duration: 1s;
+    --content-animation-delay: 2s;
 }
 
 .HeroSection {
@@ -76,7 +78,7 @@
                 bottom: 0;
                 left: -400%;
                 width: 1px;
-                animation: animateVerticalBorder var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
+                animation: vertical-border-enter var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
             }
         }
     }
@@ -108,12 +110,12 @@
         &_type {
             &_horizontal {
                 height: 1px;
-                animation: animateHorizontalBorder var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
+                animation: horizontal-border-enter var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
             }
 
             &_vertical {
                 width: 1px;
-                animation: animateVerticalBorder var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
+                animation: vertical-border-enter var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
             }
         }
 
@@ -171,34 +173,59 @@
                 height: var(--circle-size-medium);
                 width: var(--circle-size-medium);
                 left: calc(-1 * (var(--circle-size-medium) / 2));
-                animation: animateGreenCircleUp var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
+                animation: green-circle-up var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
             }
 
             &_bottomLeft {
                 height: var(--circle-size-large);
                 width: var(--circle-size-large);
                 left: calc(-1 * (var(--circle-size-large) / 2));
-                animation: animateRedCircleDown var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
+                animation: red-circle-down var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
             }
 
             &_topRight {
                 height: var(--circle-size-small);
                 width: var(--circle-size-small);
                 right: calc(-1 * (var(--circle-size-small) / 2));
-                animation: animateRedCircleUp var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
+                animation: red-circle-up var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
             }
 
             &_bottomRight {
                 height: var(--circle-size-tiny);
                 width: var(--circle-size-tiny);
                 right: calc(-1 * (var(--circle-size-tiny) / 2));
-                animation: animateGreenCircleDown var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
+                animation: green-circle-down var(--circle-animation-duration) forwards ease-out var(--circle-animation-delay) 1 normal;
             }
+        }
+    }
+
+    &-HeaderContainer {
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        padding: 1rem 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        animation: drop-down var(--content-animation-duration) forwards ease-out var(--content-animation-delay) 1 normal;
+    }
+
+    &-HeaderText {
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        font-size: 0.875rem;
+        font-size: clamp(0.775rem, 0.755rem + 0.1vw, 0.875rem);
+
+        @include tablet-and-mobile {
+            font-size: 0.775rem;
+            font-size: clamp(0.775rem, 0.755rem + 0.1vw, 0.875rem);
         }
     }
 }
 
-@keyframes animateHorizontalBorder {
+@keyframes horizontal-border-enter {
     0% {
         width: 0%;
         background: rgba(0, 189, 76, 0.50);
@@ -210,7 +237,7 @@
     }
 }
 
-@keyframes animateVerticalBorder {
+@keyframes vertical-border-enter {
     0% {
         height: 0%;
         background: rgba(0, 189, 76, 0.50);
@@ -222,11 +249,11 @@
     }
 }
 
-@keyframes animateGreenCircleUp {
+@keyframes green-circle-up {
     0% {
         opacity: 0;
         top: calc(80% - (var(--circle-size-medium) / 2));
-        transform: scale(1.5);
+        transform: scale(0.5);
     }
 
     100% {
@@ -235,7 +262,7 @@
     }
 }
 
-@keyframes animateGreenCircleDown {
+@keyframes green-circle-down {
     0% {
         opacity: 0;
         bottom: 50%;
@@ -248,7 +275,7 @@
     }
 }
 
-@keyframes animateRedCircleUp {
+@keyframes red-circle-up {
     0% {
         opacity: 0;
         top: 100%;
@@ -263,10 +290,11 @@
     }
 }
 
-@keyframes animateRedCircleDown {
+@keyframes red-circle-down {
     0% {
         opacity: 0;
         bottom: 100%;
+        transform: scale(0.5);
     }
 
     100% {
@@ -274,6 +302,18 @@
         bottom: calc(-1 * (var(--circle-size-large) / 2));
         background-color: var(--primary-base-color);
         border: 2px solid var(--color-white);
+    }
+}
+
+@keyframes drop-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

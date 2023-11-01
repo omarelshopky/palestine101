@@ -1,6 +1,5 @@
 <script setup>
-// eslint-disable-next-line no-unused-vars
-const unusedVariableToEnableMixin = false;
+import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
 </script>
 
 <template>
@@ -19,6 +18,12 @@ const unusedVariableToEnableMixin = false;
             </div>
             <div :class="bem({ element: 'UpperRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'lower' } })"></span>
+                <div :class="bem({ element: 'HeaderContainer' })">
+                    <PalestineFlag />
+                    <span :class="bem({ element: 'HeaderText' })">
+                        Free <br> Palestine
+                    </span>
+                </div>
             </div>
             <div :class="bem({ element: 'LowerRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'upper' } })"></span>
