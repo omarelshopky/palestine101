@@ -9,6 +9,8 @@
     --border-animation-delay: 0.3s;
     --content-animation-duration: 1s;
     --content-animation-delay: 2s;
+    --title-animation-duration: 1.5s;
+    --title-animation-delay: 0.3s;
 }
 
 .HeroSection {
@@ -199,6 +201,10 @@
         }
     }
 
+    &-PalestineFlag {
+        height: 50%;
+    }
+
     &-HeaderContainer {
         opacity: 0;
         height: 100%;
@@ -221,6 +227,27 @@
         @include tablet-and-mobile {
             font-size: 0.775rem;
             font-size: clamp(0.775rem, 0.755rem + 0.1vw, 0.875rem);
+        }
+    }
+
+    &-Title {
+        opacity: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.6rem;
+        line-height: normal;
+        color: var(--color-green);
+        font-size: 3.125rem;
+        font-size: clamp(1.9rem, 1.655rem + 1.225vw, 3.125rem);
+        animation: grow-up var(--title-animation-duration) forwards ease-out var(--title-animation-delay) 1 normal;
+
+        @include tablet-and-mobile {
+            letter-spacing: 0.25rem;
+            font-size: 1.9rem;
+            font-size: clamp(1.9rem, 1.655rem + 1.225vw, 3.125rem);
+        }
+
+        & span {
+            color: var(--color-white);
         }
     }
 }
@@ -313,6 +340,17 @@
 
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grow-up {
+    0% {
+        transform: scale(0.6) translateY(30%);
+        opacity: 0;
+    }
+
+    100% {
         opacity: 1;
     }
 }

@@ -19,7 +19,7 @@ import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
             <div :class="bem({ element: 'UpperRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'lower' } })"></span>
                 <div :class="bem({ element: 'HeaderContainer' })">
-                    <PalestineFlag />
+                    <PalestineFlag :class="bem({ element: 'PalestineFlag' })" />
                     <span :class="bem({ element: 'HeaderText' })">
                         Free <br> Palestine
                     </span>
@@ -31,7 +31,10 @@ import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
             <div :class="bem({ element: 'CenterWrapper' })">
                 <span :class="bem({ element: 'Circle', mod: { color: 'red', location: 'bottomLeft' } })"></span>
                 <span :class="bem({ element: 'Circle', mod: { color: 'red', location: 'topRight' } })"></span>
-                CenterWrapper
+                <h1 :class="bem({ element: 'Title' })">
+                    Palestine <br>
+                    <span>101</span>
+                </h1>
             </div>
         </div>
     </div>
