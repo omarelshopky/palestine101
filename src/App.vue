@@ -1,8 +1,9 @@
 <script setup>
+import HeroSection from 'components/HeroSection/HeroSection.vue';
 </script>
 
 <template>
   <div :class="bem()">
-    Palestine 101
+    <HeroSection />
   </div>
 </template>

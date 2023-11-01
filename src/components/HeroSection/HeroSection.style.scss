@@ -1,0 +1,166 @@
+.HeroSection {
+    &-Wrapper {
+        height: 100vh;
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 16px;
+        overflow: hidden;
+
+        @include tablet-and-mobile {
+            height: 90vh;
+        }
+    }
+
+    &-Content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include tablet-and-mobile {
+            align-items: flex-start;
+        }
+    }
+
+    &-CenterWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 66%;
+        width: 60%;
+
+        @include tablet-and-mobile {
+            width: 80%;
+        }
+    }
+
+    &-LeftColumn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 20%;
+
+        @include tablet-and-mobile {
+            display: none;
+        }
+    }
+
+    &-RightColumn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 20%;
+
+        &FarLeftBorder {
+            display: none;
+
+            @include tablet-and-mobile {
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: -400%;
+                width: 1px;
+                animation: animateVerticalBorder 2s forwards ease-out 0.3s 1 normal;
+            }
+        }
+    }
+
+    &-UpperRow {
+        position: absolute;
+        top: 0;
+        left: 20%;
+        height: 17%;
+        width: 80%;
+
+        @include tablet-and-mobile {
+            left: 0;
+            width: 100%;
+        }
+    }
+
+    &-LowerRow {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 17%;
+        width: 80%;
+    }
+
+    &-Border {
+        position: absolute;
+
+        &_type {
+            &_horizontal {
+                height: 1px;
+                animation: animateHorizontalBorder 2s forwards ease-out 0.3s 1 normal;
+            }
+
+            &_vertical {
+                width: 1px;
+                animation: animateVerticalBorder 2s forwards ease-out 0.3s 1 normal;
+            }
+        }
+
+        &_location {
+            &_upper {
+                top: 0;
+                right: 0;
+            }
+
+            &_lower {
+                bottom: 0;
+                left: 0;
+            }
+
+            &_rightRight {
+                top: 0;
+                right: 0;
+            }
+
+            &_rightLeft {
+                top: 0;
+                left: 0;
+            }
+
+            &_leftRight {
+                bottom: 0;
+                right: 0;
+            }
+
+            &_leftLeft {
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+@keyframes animateHorizontalBorder {
+    0% {
+        width: 0%;
+        background: rgba(0, 189, 76, 0.50);
+    }
+
+    100% {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.50);
+    }
+}
+
+@keyframes animateVerticalBorder {
+    0% {
+        height: 0%;
+        background: rgba(0, 189, 76, 0.50);
+    }
+
+    100% {
+        height: 100%;
+        background: rgba(255, 255, 255, 0.50);
+    }
+}
+
