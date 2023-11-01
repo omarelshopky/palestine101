@@ -1,7 +1,12 @@
+:root {
+    --lang-selector-animation-duration: 1.5s;
+    --lang-selector-animation-delay: 0s;
+}
+
 .LanguageSelector {
     &-Wrapper {
         border-top: 0.8px solid rgba(255, 255, 255, 0.50);
-        border-bottom: 0.8px solid rgba(255, 255, 255, 0.50);
+        overflow: hidden;
     }
 
     &-Content {
@@ -23,10 +28,15 @@
         letter-spacing: 4.8px;
         font-size: 2rem;
         font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        opacity: 0;
 
         @include tablet-and-mobile {
             font-size: 1.5rem;
             font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        }
+
+        &_inView {
+            animation: drop-down var(--lang-selector-animation-duration) forwards ease-out var(--lang-selector-animation-delay) 1 normal;
         }
     }
 
@@ -37,9 +47,38 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 3rem;
+        opacity: 0;
 
         @include tablet-and-mobile {
             gap: 1.5rem;
         }
+
+        &_inView {
+            animation: go-up var(--lang-selector-animation-duration) forwards ease-out var(--lang-selector-animation-delay) 1 normal;
+        }
+    }
+}
+
+@keyframes drop-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes go-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
