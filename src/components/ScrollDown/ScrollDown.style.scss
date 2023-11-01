@@ -1,0 +1,46 @@
+.ScrollDown {
+    &-Wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: vibrate 2.5s forwards ease-in-out 0s infinite alternate-reverse;
+    }
+
+    &-Text {
+        font-family: var(--font-rubik);
+        font-size: 1.25rem;
+        font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+        text-shadow: 0px 4px 15px rgba(255, 255, 255, 0.25);
+        letter-spacing: 3px;
+
+        @include tablet-and-mobile {
+            font-size: 1rem;
+            font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+        }
+    }
+
+    &-Arrow {
+        height: 3rem;
+        width: 3rem;
+        height: clamp(2rem, 1.8rem + 1vw, 3rem);
+        width: clamp(2rem, 1.8rem + 1vw, 3rem);
+
+        @include tablet-and-mobile {
+            height: 2rem;
+            width: 2rem;
+            height: clamp(2rem, 1.8rem + 1vw, 3rem);
+            width: clamp(2rem, 1.8rem + 1vw, 3rem);
+        }
+    }
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(40%);
+    }
+}

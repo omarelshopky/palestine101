@@ -1,5 +1,6 @@
 <script setup>
 import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
+import ScrollDown from 'components/ScrollDown/ScrollDown.vue';
 </script>
 
 <template>
@@ -27,6 +28,9 @@ import PalestineFlag from 'components/PalestineFlag/PalestineFlag.vue';
             </div>
             <div :class="bem({ element: 'LowerRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'upper' } })"></span>
+                <div :class="bem({ element: 'ScrollDown' })">
+                    <ScrollDown />
+                </div>
             </div>
             <div :class="bem({ element: 'CenterWrapper' })">
                 <span :class="bem({ element: 'Circle', mod: { color: 'red', location: 'bottomLeft' } })"></span>

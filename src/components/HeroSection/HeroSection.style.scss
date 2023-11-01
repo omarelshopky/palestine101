@@ -250,6 +250,21 @@
             color: var(--color-white);
         }
     }
+
+    &-ScrollDown {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 75%;
+        opacity: 0;
+        animation: show-off var(--content-animation-duration) forwards ease-out var(--content-animation-delay) 1 normal;
+
+        @include tablet-and-mobile {
+            width: 100%;
+        }
+    }
 }
 
 @keyframes horizontal-border-enter {
@@ -347,6 +362,16 @@
 @keyframes grow-up {
     0% {
         transform: scale(0.6) translateY(30%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show-off {
+    0% {
         opacity: 0;
     }
 
