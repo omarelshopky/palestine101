@@ -1,4 +1,5 @@
 <script setup>
+import ContentSections from 'components/ContentSections/ContentSections.vue';
 import HeroSection from 'components/HeroSection/HeroSection.vue';
 import LanguageSelector from 'components/LanguageSelector/LanguageSelector.vue';
 import PageFooter from 'components/PageFooter/PageFooter.vue';
@@ -8,6 +9,7 @@ import PageFooter from 'components/PageFooter/PageFooter.vue';
   <div :class="bem()">
     <HeroSection />
     <LanguageSelector />
+    <ContentSections />
     <PageFooter />
   </div>
 </template>

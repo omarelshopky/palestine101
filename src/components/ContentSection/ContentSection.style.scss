@@ -1,0 +1,79 @@
+.ContentSection {
+    &-Wrapper {
+        border-top: 0.8px solid rgba(255, 255, 255, 0.50);
+    }
+
+    &-Ribbons {
+        width: 2rem;
+        height: 1.875rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+
+    &-Ribbon {
+        display: inline-block;
+        height: 100%;
+        width: 0.5rem;
+
+        &_color {
+            &_red {
+                background: var(--color-red);
+            }
+
+            &_black {
+                background: var(--color-black);
+            }
+
+            &_white {
+                background: var(--color-white);
+            }
+
+            &_green {
+                background: var(--color-green);
+            }
+        }
+    }
+
+    &-Content {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 6rem;
+    }
+
+    &-Header {
+        font-size: 2rem;
+        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        text-transform: capitalize;
+        text-align: center;
+        line-height: normal;
+
+        @include tablet-and-mobile {
+            font-size: 1.5rem;
+            font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        }
+    }
+
+    &-Text {
+        font-family: var(--font-cairo);
+        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
+        line-height: normal;
+
+        @include tablet-and-mobile {
+            font-size: 1.2rem;
+            font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
+        }
+
+        & strong {
+            color: var(--secondary-base-color);
+        }
+    }
+}
