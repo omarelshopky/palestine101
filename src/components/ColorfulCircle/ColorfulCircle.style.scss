@@ -28,6 +28,7 @@
             height: var(--circle-size-medium);
             width: var(--circle-size-medium);
             left: calc(-1 * (var(--circle-size-medium) / 2));
+            top: calc(17% - (var(--circle-size-medium) / 2));
             animation: green-circle-up var(--circle-animation-duration) forwards ease-out
                 var(--circle-animation-delay) 1 normal;
         }
@@ -36,6 +37,7 @@
             height: var(--circle-size-large);
             width: var(--circle-size-large);
             left: calc(-1 * (var(--circle-size-large) / 2));
+            bottom: calc(-1 * (var(--circle-size-large) / 2));
             animation: red-circle-down var(--circle-animation-duration) forwards ease-out
                 var(--circle-animation-delay) 1 normal;
         }
@@ -44,6 +46,7 @@
             height: var(--circle-size-small);
             width: var(--circle-size-small);
             right: calc(-1 * (var(--circle-size-small) / 2));
+            top: calc(-1 * (var(--circle-size-small) / 2));
             animation: red-circle-up var(--circle-animation-duration) forwards ease-out
                 var(--circle-animation-delay) 1 normal;
         }
@@ -52,6 +55,7 @@
             height: var(--circle-size-tiny);
             width: var(--circle-size-tiny);
             right: calc(-1 * (var(--circle-size-tiny) / 2));
+            bottom: 10%;
             animation: green-circle-down var(--circle-animation-duration) forwards ease-out
                 var(--circle-animation-delay) 1 normal;
         }
@@ -61,39 +65,33 @@
 @keyframes green-circle-up {
     0% {
         opacity: 0;
-        top: calc(80% - (var(--circle-size-medium) / 2));
-        transform: scale(0.5);
+        transform: scale(0.5) translateY(120vh);
     }
 
     100% {
         opacity: 1;
-        top: calc(17% - (var(--circle-size-medium) / 2));
     }
 }
 
 @keyframes green-circle-down {
     0% {
         opacity: 0;
-        bottom: 50%;
-        transform: scale(1.5);
+        transform: scale(1.5) translateY(-70vh);
     }
 
     100% {
         opacity: 1;
-        bottom: 10%;
     }
 }
 
 @keyframes red-circle-up {
     0% {
         opacity: 0;
-        top: 100%;
-        transform: scale(1.5);
+        transform: scale(1.5) translateY(50vh);
     }
 
     100% {
         opacity: 1;
-        top: calc(-1 * (var(--circle-size-small) / 2));
         background-color: var(--primary-base-color);
         border: 2px solid var(--color-white);
     }
@@ -102,13 +100,11 @@
 @keyframes red-circle-down {
     0% {
         opacity: 0;
-        bottom: 100%;
-        transform: scale(0.5);
+        transform: scale(0.5) translateY(-125vh);
     }
 
     100% {
         opacity: 1;
-        bottom: calc(-1 * (var(--circle-size-large) / 2));
         background-color: var(--primary-base-color);
         border: 2px solid var(--color-white);
     }
