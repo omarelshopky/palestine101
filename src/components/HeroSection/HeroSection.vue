@@ -35,6 +35,12 @@ import ScrollDown from 'components/ScrollDown/ScrollDown.vue';
                     Palestine <br>
                     <span>101</span>
                 </h1>
+                <h2 :class="bem({ element: 'SubTitle' })">
+                    Introductory to the Palestinian Cause <br>
+                    <span>
+                        since the advent of the israeli occupation
+                    </span>
+                </h2>
             </div>
         </div>
     </div>
