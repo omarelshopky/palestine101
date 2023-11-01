@@ -1,0 +1,37 @@
+.LanguageButton {
+    font-family: var(--font-cairo);
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-dark-gray);
+    padding: 12px 24px;
+    outline: none;
+    background: none;
+
+    @include tablet-and-mobile {
+        font-size: 1.2rem;
+        font-size: clamp(1.2rem, 1.14rem + 0.3vw, 1.5rem);
+    }
+
+    &:hover {
+        color: var(--secondary-base-color);
+    }
+
+    &_active {
+        background: var(--secondary-base-color);
+        color: var(--color-white);
+        cursor: default;
+
+        &:hover {
+            color: var(--color-white);
+        }
+    }
+}

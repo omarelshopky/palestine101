@@ -1,0 +1,45 @@
+.LanguageSelector {
+    &-Wrapper {
+        border-top: 0.8px solid rgba(255, 255, 255, 0.50);
+        border-bottom: 0.8px solid rgba(255, 255, 255, 0.50);
+    }
+
+    &-Content {
+        max-width: 1300px;
+        margin: 0 auto;
+        padding: 0 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3.9375rem 1rem;
+        gap: 2.5rem;
+    }
+
+    &-Header {
+        text-align: center;
+        text-transform: capitalize;
+        line-height: normal;
+        letter-spacing: 4.8px;
+        font-size: 2rem;
+        font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+
+        @include tablet-and-mobile {
+            font-size: 1.5rem;
+            font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
+        }
+    }
+
+    &-LanguagesContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        @include tablet-and-mobile {
+            gap: 1.5rem;
+        }
+    }
+}
