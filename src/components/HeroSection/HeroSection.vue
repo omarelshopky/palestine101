@@ -20,12 +20,7 @@ import ScrollDown from 'components/ScrollDown/ScrollDown.vue';
             </div>
             <div :class="bem({ element: 'UpperRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'lower' } })"></span>
-                <div :class="bem({ element: 'HeaderContainer' })">
-                    <PalestineFlag :class="bem({ element: 'PalestineFlag' })" />
-                    <span :class="bem({ element: 'HeaderText' })">
-                        Free <br> Palestine
-                    </span>
-                </div>
+                <PalestineFlag />
             </div>
             <div :class="bem({ element: 'LowerRow' })">
                 <span :class="bem({ element: 'Border', mod: { type: 'horizontal', location: 'upper' } })"></span>

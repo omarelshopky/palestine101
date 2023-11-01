@@ -1,0 +1,42 @@
+.PalestineFlag {
+    &-Wrapper {
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        padding: 1rem 2.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1rem;
+        animation: drop-down var(--content-animation-duration) forwards ease-out var(--content-animation-delay) 1 normal;
+    }
+
+    &-Flag {
+        height: 50%;
+    }
+
+    &-Text {
+        text-transform: uppercase;
+        letter-spacing: 1.8px;
+        font-size: 0.875rem;
+        font-size: clamp(0.775rem, 0.755rem + 0.1vw, 0.875rem);
+
+        @include tablet-and-mobile {
+            font-size: 0.775rem;
+            font-size: clamp(0.775rem, 0.755rem + 0.1vw, 0.875rem);
+        }
+    }
+}
+
+@keyframes drop-down {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
