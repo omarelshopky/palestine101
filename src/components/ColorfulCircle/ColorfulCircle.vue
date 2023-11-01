@@ -1,13 +1,13 @@
 <script setup>
 defineProps({
-  color: {
-    type: String,
-    required: true
-  },
-  location: {
-    type: String,
-    required: true
-  }
+    color: {
+        type: String,
+        required: true
+    },
+    location: {
+        type: String,
+        required: true
+    }
 })
 </script>
 
@@ -16,6 +16,6 @@ defineProps({
 </template>
 
 <style lang="scss">
-@import "@/styles/_media.scss";
-@import "./ColorfulCircle.style.scss";
+@import '@/styles/_media.scss';
+@import './ColorfulCircle.style.scss';
 </style>

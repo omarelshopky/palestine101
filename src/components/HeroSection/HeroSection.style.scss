@@ -77,7 +77,8 @@
                 bottom: 0;
                 left: -400%;
                 width: 1px;
-                animation: vertical-border-enter var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
+                animation: vertical-border-enter var(--border-animation-duration) forwards ease-out
+                    var(--border-animation-delay) 1 normal;
             }
         }
     }
@@ -109,12 +110,14 @@
         &_type {
             &_horizontal {
                 height: 1px;
-                animation: horizontal-border-enter var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
+                animation: horizontal-border-enter var(--border-animation-duration) forwards
+                    ease-out var(--border-animation-delay) 1 normal;
             }
 
             &_vertical {
                 width: 1px;
-                animation: vertical-border-enter var(--border-animation-duration) forwards ease-out var(--border-animation-delay) 1 normal;
+                animation: vertical-border-enter var(--border-animation-duration) forwards ease-out
+                    var(--border-animation-delay) 1 normal;
             }
         }
 
@@ -160,7 +163,8 @@
         color: var(--color-green);
         font-size: 3.125rem;
         font-size: clamp(1.9rem, 1.655rem + 1.225vw, 3.125rem);
-        animation: grow-up var(--title-animation-duration) forwards ease-out var(--title-animation-delay) 1 normal;
+        animation: grow-up var(--title-animation-duration) forwards ease-out
+            var(--title-animation-delay) 1 normal;
 
         @include tablet-and-mobile {
             letter-spacing: 0.25rem;
@@ -181,7 +185,8 @@
         line-height: normal;
         font-family: var(--font-rubik);
         color: var(--color-white);
-        animation: grow-right var(--subtitle-animation-duration) forwards ease-out var(--subtitle-animation-delay) 1 normal;
+        animation: grow-right var(--subtitle-animation-duration) forwards ease-out
+            var(--subtitle-animation-delay) 1 normal;
         font-size: 2rem;
         font-size: clamp(1.5rem, 1.4rem + 0.5vw, 2rem);
 
@@ -211,7 +216,8 @@
         height: 100%;
         width: 75%;
         opacity: 0;
-        animation: show-off var(--subtitle-animation-duration) forwards ease-out var(--subtitle-animation-delay) 1 normal;
+        animation: show-off var(--subtitle-animation-duration) forwards ease-out
+            var(--subtitle-animation-delay) 1 normal;
 
         @include tablet-and-mobile {
             width: 100%;
@@ -222,24 +228,24 @@
 @keyframes horizontal-border-enter {
     0% {
         width: 0%;
-        background: rgba(0, 189, 76, 0.50);
+        background: rgba(0, 189, 76, 0.5);
     }
 
     100% {
         width: 100%;
-        background: rgba(255, 255, 255, 0.50);
+        background: rgba(255, 255, 255, 0.5);
     }
 }
 
 @keyframes vertical-border-enter {
     0% {
         height: 0%;
-        background: rgba(0, 189, 76, 0.50);
+        background: rgba(0, 189, 76, 0.5);
     }
 
     100% {
         height: 100%;
-        background: rgba(255, 255, 255, 0.50);
+        background: rgba(255, 255, 255, 0.5);
     }
 }
 

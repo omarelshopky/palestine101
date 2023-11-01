@@ -5,7 +5,7 @@
 
 .LanguageSelector {
     &-Wrapper {
-        border-top: 0.8px solid rgba(255, 255, 255, 0.50);
+        border-top: 0.8px solid rgba(255, 255, 255, 0.5);
         overflow: hidden;
     }
 
@@ -36,7 +36,8 @@
         }
 
         &_inView {
-            animation: drop-down var(--lang-selector-animation-duration) forwards ease-out var(--lang-selector-animation-delay) 1 normal;
+            animation: drop-down var(--lang-selector-animation-duration) forwards ease-out
+                var(--lang-selector-animation-delay) 1 normal;
         }
     }
 
@@ -54,7 +55,8 @@
         }
 
         &_inView {
-            animation: go-up var(--lang-selector-animation-duration) forwards ease-out var(--lang-selector-animation-delay) 1 normal;
+            animation: go-up var(--lang-selector-animation-duration) forwards ease-out
+                var(--lang-selector-animation-delay) 1 normal;
         }
     }
 }

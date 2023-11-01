@@ -1,14 +1,14 @@
 :root {
     // Colors
-    --color-black: #06010A;
-    --color-white: #FFFFFF;
-    --color-gray: #EFEFEF;
-    --color-dark-gray: #A2A2A2;
-    --color-darker-gray: #9F9F9F;
+    --color-black: #06010a;
+    --color-white: #ffffff;
+    --color-gray: #efefef;
+    --color-dark-gray: #a2a2a2;
+    --color-darker-gray: #9f9f9f;
     --color-darkest-gray: #696969;
     --color-green: #{$secondary-base-color};
-    --color-red: #D90000;
-    --color-blue: #00F0FF;
+    --color-red: #d90000;
+    --color-blue: #00f0ff;
 
     --primary-base-color: #{$primary-base-color};
     --primary-light-color: #{lighten($primary-base-color, 10%)};
@@ -21,7 +21,7 @@
     --font-main-color: var(--color-white);
     --font-size-base: 16px;
     --font-size-base-mobile: 12px;
-    --font-akira: "akira_expanded", "Nunito", sans-serif;
-    --font-cairo: "cairo", "Nunito", sans-serif;
-    --font-rubik: "rubik", "Nunito", sans-serif;
+    --font-akira: 'akira_expanded', 'Nunito', sans-serif;
+    --font-cairo: 'cairo', 'Nunito', sans-serif;
+    --font-rubik: 'rubik', 'Nunito', sans-serif;
 }

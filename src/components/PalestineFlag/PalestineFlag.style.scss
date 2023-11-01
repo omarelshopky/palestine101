@@ -9,7 +9,8 @@
         justify-content: flex-start;
         align-items: center;
         gap: 1rem;
-        animation: drop-down var(--subtitle-animation-duration) forwards ease-out var(--subtitle-animation-delay) 1 normal;
+        animation: drop-down var(--subtitle-animation-duration) forwards ease-out
+            var(--subtitle-animation-delay) 1 normal;
     }
 
     &-Flag {
