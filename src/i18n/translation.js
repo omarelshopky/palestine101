@@ -23,6 +23,7 @@ const translation = {
         this.currentLocale = locale
         document.querySelector('html').setAttribute('lang', locale)
         document.querySelector('meta[property="og:locale"]').setAttribute('content', locale)
+        document.querySelector('link[rel="canonical"]').setAttribute('href', 'https://palestine101.3knights.tech/' + locale)
     },
 
     isLocaleSupported(locale) {
