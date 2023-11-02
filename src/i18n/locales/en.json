@@ -1,7 +1,10 @@
 {
     "locale": {
-        "ar": "Arabic",
-        "en": "English"
+        "ar": "اللغة العربية",
+        "en": "English",
+        "fr": "Français",
+        "ru": "Русский",
+        "de": "Deutsch"
     },
     "section1": {
         "title": "About Palestine in English"
