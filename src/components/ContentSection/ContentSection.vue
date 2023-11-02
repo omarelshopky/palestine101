@@ -12,7 +12,7 @@ const unusedVariableCreatedToEnableTheBemMixin = false
             <span :class="bem({ element: 'Ribbon', mod: { color: 'green' } })"></span>
         </div>
         <div :class="bem({ element: 'Content' })">
-            <h3 :class="bem({ element: 'Header' })">About Palestine</h3>
+            <h3 :class="bem({ element: 'Header' })">{{ $t('section1.title') }}</h3>
 
             <div :class="bem({ element: 'Text' })">
                 Palestine is at the eastern end of the <strong>Mediterranean Sea</strong>, and forms

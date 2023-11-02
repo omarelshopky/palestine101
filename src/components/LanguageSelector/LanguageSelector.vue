@@ -1,54 +1,9 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import LanguageButton from 'components/LanguageButton/LanguageButton.vue'
+import translation from '@/i18n/translation'
 
 const wrapper = ref(null)
-const supportedLanguages = [
-    {
-        id: 'en',
-        label: 'English'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'fr',
-        label: 'French'
-    },
-    {
-        id: 'ar',
-        label: 'العربية'
-    }
-]
 
 const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -86,11 +41,9 @@ onMounted(() => observer.observe(wrapper.value))
             </span>
             <div :class="bem({ element: 'LanguagesContainer' })">
                 <LanguageButton
-                    v-for="(language, index) in supportedLanguages"
+                    v-for="(locale, index) in translation.supportedLocales"
                     :key="index"
-                    :id="language.id"
-                    :label="language.label"
-                    :active="language.id === 'en'"
+                    :locale="locale"
                 />
             </div>
         </div>
