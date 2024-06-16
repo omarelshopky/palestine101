@@ -6,7 +6,7 @@ const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
         {
-            path: `${import.meta.env.BASE_URL}/:locale?`,
+            path: '/:locale?',
             component: RouterView,
             beforeEnter: translation.routeMiddleware,
             children: [
@@ -18,7 +18,7 @@ const router = createRouter({
             ]
         },
         {
-            path: `${import.meta.env.BASE_URL}/:pathMatch(.*)*`,
+            path: '/:pathMatch(.*)*',
             redirect: {
                 name: 'home'
             }
