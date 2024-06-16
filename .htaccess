@@ -1,0 +1,21 @@
+<IfModule mod_negotiation.c>
+  Options -MultiViews
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule . /index.html [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Content-Security-Policy "script-src 'self';"
+    Header set Access-Control-Allow-Origin SAMEORIGIN
+    Header set X-Download-Options noopen
+    Header set X-Frame-Options Deny
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
