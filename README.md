@@ -1,6 +1,6 @@
 # palestine101
 
-This template should help get you started developing with Vue 3 in Vite.
+A multilingual introductory website about the Palestinian cause.
 
 ## Recommended IDE Setup
 
