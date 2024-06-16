@@ -4,10 +4,10 @@
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
+  RewriteBase /palestine101/
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule . /index.html [L]
+  RewriteRule . /palestine101/index.html [L]
 </IfModule>
 
 <IfModule mod_headers.c>
